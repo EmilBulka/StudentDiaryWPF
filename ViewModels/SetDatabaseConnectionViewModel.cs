@@ -16,8 +16,6 @@ namespace Diary.ViewModels
 {
     public class SetDatabaseConnectionViewModel : ViewModelBase, IDataErrorInfo
     {
-    
-        
         public string ServerName { get; set; }
   
         public string DatabaseName { get; set; }
@@ -30,17 +28,12 @@ namespace Diary.ViewModels
         } 
         private string _connectionString;
         public SetDatabaseConnectionViewModel()
-        {
-            
+        {         
             CloseCommand = new RelayCommand(Close);
-            ConfirmCommand = new RelayCommand(Confirm);
-            
-            
+            ConfirmCommand = new RelayCommand(Confirm);  
         }
 
         private string BindConnectionString() { return $"Server={ServerName};Database={DatabaseName};User Id={UserId};Password={Password};"; }
-       
-
         private void Confirm(object obj)
         {
             if (ValidCondition())
@@ -49,26 +42,19 @@ namespace Diary.ViewModels
                 return;
             }
            _connectionString = BindConnectionString();
-           
-            
+         
             CloseWindow(obj as Window);
             ConfirmRestart();
         }
 
         private void Close(object obj)
-        {
-            
-            CloseWindow(obj as Window);
-            
+        {          
+            CloseWindow(obj as Window); 
         }
 
         public ICommand CloseCommand { get; set; }
         public ICommand ConfirmCommand { get; set; }
         public ICommand DisplayConnectionStringCommand { get; set; }
-
-
-   
-
         public string Error
         {
             get
@@ -76,8 +62,6 @@ namespace Diary.ViewModels
                 return null;
             }
         }
-
-
         public string this[string name]
         {
             get
@@ -87,8 +71,7 @@ namespace Diary.ViewModels
                 if (ValidCondition())
                 {
                     result = "Pole nie może byc puste";
-                }
-                             
+                }                 
                 return result;
             }
         }
@@ -97,27 +80,22 @@ namespace Diary.ViewModels
         private bool ValidCondition()
         {
            
-
             if (ServerName != null || DatabaseName != null || UserId != null || Password != null)
             {
                 return false;
             }
             else
-                return true;
-            
+                return true;   
         }
 
 
         private void CloseWindow(Window window)
         {
-            window.Close();
-            
+            window.Close();           
         }
        
         private async void IsConnectionToDbPossible()
-        {
-            
-
+        {       
             using (var context = new ApplicationDbContext())
             {
 
@@ -136,9 +114,7 @@ namespace Diary.ViewModels
                     splashScreen.Close(TimeSpan.Zero);
                     MessageBox.Show("Nieprawidłowe parametry bazy danych", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
                     Settings.Default.Reset();
-                   
-                }
-                    
+                }       
             } 
         }
 
@@ -149,22 +125,18 @@ namespace Diary.ViewModels
             Settings.Default.User_Id = UserId;
             Settings.Default.Password = Password;
 
-            
             IsConnectionToDbPossible();
-            
         }
         
         private void RestartApplication()
         {
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
-            
         }
 
         private async Task ConfirmRestart()
         {
-           
-
+          
             var metroWindow = Application.Current.MainWindow as MetroWindow;
             var dialog = await metroWindow.ShowMessageAsync(
                 "Potwierdzenie restartu aplikacji",
@@ -173,13 +145,7 @@ namespace Diary.ViewModels
 
             if (dialog != MessageDialogResult.Affirmative)
                 return;
-
-
-            OverWriteUserProperties();
-            
-            
-           
+            OverWriteUserProperties();    
         }
-
     }
 }
