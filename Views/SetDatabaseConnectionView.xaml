@@ -1,0 +1,70 @@
+﻿<mah:MetroWindow x:Class="Diary.Views.SetDatabaseConnectionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diary.Views"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Name="SetDatabaseConnectionWindow"
+        Title="Nowe połączenie bazy danych" Height="400" Width="300">
+    <Grid>
+
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Column="0" Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" Content="Nazwa Serwera: " Margin="5,10" />
+            <TextBox Text="{Binding ServerName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Grid.Row="0" Grid.Column="1" Margin="5,10"/>
+
+            <Label Grid.Row="1" Content="Nazwa Bazy Danych: " Margin="5,10"/>
+            <TextBox Text="{Binding DatabaseName,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Grid.Row="1" Grid.Column="1" Margin="5,10"/>
+
+            <Label Grid.Row="2" Margin="5,10" Content="Nazwa Użytkownika"/>
+            <TextBox Text="{Binding UserId,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Grid.Row="2" Grid.Column="1" Margin="5,10"/>
+
+            <Label Grid.Row="3" Content="Hasło: " Margin="5,10"/>
+            <TextBox Text="{Binding Password,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                     Grid.Row="3" Grid.Column="1" Margin="5,10"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1" >
+
+            <Grid.RowDefinitions>
+
+            </Grid.RowDefinitions>
+            <Button Command="{Binding ConfirmCommand}" CommandParameter="{Binding ElementName=SetDatabaseConnectionWindow}" 
+                    Content="Zatwierdź" HorizontalAlignment="Left" Margin="50,77,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.316,0.147" Height="27"/>
+            <Button Command="{Binding CloseCommand}" CommandParameter="{Binding ElementName=SetDatabaseConnectionWindow}" 
+                    Content="Anuluj" HorizontalAlignment="Left" Margin="157,77,0,0" VerticalAlignment="Top" Width="74" Height="27"/>
+
+        </Grid>
+
+    </Grid>
+
+
+</mah:MetroWindow>

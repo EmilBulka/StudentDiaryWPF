@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
+  </data>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
+  </data>
+</root>
