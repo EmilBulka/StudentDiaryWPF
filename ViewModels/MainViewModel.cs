@@ -33,24 +33,15 @@ namespace Diary.ViewModels
             EditStudentCommand = new RelayCommand(AddEditStudents, CanEditDeleteStudent);
             ChangeSettingsCommand = new RelayCommand(ChangeSettings);
 
-
-
-           
             RefreshDiary();
-
             InitGroups();
-
-
-
         }
 
         private void ChangeSettings(object obj)
         {
-
             var addEditStudentWindow = new SetDatabaseConnectionView();
             addEditStudentWindow.Closed += AddEditStudentWindow_Closed;
             addEditStudentWindow.ShowDialog();
-
         }
 
         private bool CanEditDeleteStudent(object obj)
