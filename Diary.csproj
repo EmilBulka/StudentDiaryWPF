@@ -98,6 +98,7 @@
     <Compile Include="Models\Configurations\RatingConfiguration.cs" />
     <Compile Include="Models\Configurations\StudentConfiguration.cs" />
     <Compile Include="Models\Converters\StudentConverter.cs" />
+    <Compile Include="Models\Domains\testclass.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Domains\Group.cs" />
     <Compile Include="Models\Domains\Rating.cs" />
